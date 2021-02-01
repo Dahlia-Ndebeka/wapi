@@ -13,6 +13,7 @@ class Utilisateurs extends Model
     protected $fillable = ['login', 'password', 'email', 'photo', 'role', 'actif', 
                             'date_creation', 'nomAdministrateur', 'prenomAdministrateur', 'telephoneAdministrateur'];
 
+
     protected $hidden = [
         'password',
         'remember_token',
