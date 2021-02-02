@@ -60,4 +60,12 @@ class sousCategorieController extends Controller
             
         }
     }
+
+    // Affichage des categories
+
+    public function getSousCategorie($id){
+
+        return $categorie = sousCategories::find($id)->Categories;
+
+    }
 }

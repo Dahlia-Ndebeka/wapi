@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Categories;
+use App\Models\sousCategories;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -58,5 +59,12 @@ class CategorieController extends Controller
             return $categorie;
             
         }
+    }
+
+    // Affichage des sous categories
+
+    public function getCategories($id){
+
+        return $sousCategorie = Categories::find($id)->SousCategories;
     }
 }

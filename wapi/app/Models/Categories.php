@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\sousCategories;
 
 class Categories extends Model
 {
@@ -11,4 +12,8 @@ class Categories extends Model
 
     protected $fillable = ['nomCategorie'];
 
+    public function SousCategories() 
+    { 
+        return $this->hasMany(sousCategories::class); 
+    }
 }
